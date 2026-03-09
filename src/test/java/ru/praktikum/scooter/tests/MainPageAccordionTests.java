@@ -1,6 +1,6 @@
-package MyTests;
+package ru.praktikum.scooter.tests;
 
-import PageObjects.MainPage;
+import ru.praktikum.scooter.pageobjects.MainPage;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.After;

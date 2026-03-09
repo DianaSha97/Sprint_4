@@ -1,9 +1,9 @@
-package MyTests;
+package ru.praktikum.scooter.tests;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.chrome.ChromeDriver;
-import PageObjects.MainPage;
-import PageObjects.OrderPage;
+import ru.praktikum.scooter.pageobjects.MainPage;
+import ru.praktikum.scooter.pageobjects.OrderPage;
 import org.hamcrest.MatcherAssert;
 import org.junit.After;
 import org.junit.Before;
@@ -66,17 +66,20 @@ public class OrderPageTests {
     // Параметры для запуска теста @return массив параметров
     @Parameterized.Parameters(name = "Оформление заказа. Позитивный сценарий. Пользователь: {0} {1}")
     public static Object[][] setDataForOrder() {
-        return new Object[][] {
-                {"Иван",
-                "Иванов",
-                "Москва, ул. Пушкина, д. 1",
-                "Черкизовская",
-                "89998887766",
-                "10.03.2026",
-                "четверо суток",
-                "чёрный жемчуг",
-                "Позвоните за час"},
-                        {"Мария",
+        return new Object[][]{
+                {
+                        "Иван",
+                        "Иванов",
+                        "Москва, ул. Пушкина, д. 1",
+                        "Черкизовская",
+                        "89998887766",
+                        "10.03.2026",
+                        "четверо суток",
+                        "чёрный жемчуг",
+                        "Позвоните за час"
+                },
+                {
+                        "Мария",
                         "Смирнова",
                         "Москва, ул. Ленина, д. 15",
                         "Сокольники",
@@ -84,7 +87,8 @@ public class OrderPageTests {
                         "11.03.2026",
                         "двое суток",
                         "серая безысходность",
-                        "Домофон не работает"},
+                        "Домофон не работает"
+                }
         };
     }
 
